@@ -1,0 +1,255 @@
+
+.top-container{
+  width: 100%;
+  min-width: 810px;
+  height: 10vh;
+  background-color: #f9f9f9;
+  padding: 10px;
+  .top-control{
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    span{
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      text-align: center;
+      line-height: 18px;
+      font-size: 12px;
+      border-radius: 50%;
+      margin-right: 5px;
+      cursor: pointer;
+      &::before{
+        opacity: 0;
+      }
+      &:hover::before{
+        opacity: 1;
+      }
+      &:first-of-type{
+        background-color: #dd6d60;
+      }
+      &:nth-of-type(2){
+        background-color: #dcc060;
+      }
+      &:nth-of-type(3){
+        background-color: #84bb58;
+      }
+    }
+  }
+  .top-info{
+    position: relative;
+    height: 46px;
+    line-height: 46px;
+    .title{
+      float: left;
+      color: #666;
+      font-size: 25px;
+      height: 46px;
+      line-height: 46px;
+      img{
+        float: left;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+      h1{
+        float: left;
+      }
+    }
+    .search-wrapper{
+      position: absolute;
+      left: 400px;
+      bottom: 0;
+      span{
+        width: 250px;
+        height: 32px;
+        line-height: 32px;
+        box-sizing: content-box;
+        input{
+          width: 182px;
+          height: 30px;
+        }
+        span{
+          width: 32px;
+          height: 32px;
+        }
+      }
+      &:hover .search-preview{
+        display: block;
+        opacity: 1;
+      }
+      .search-preview{
+        display: none;
+        opacity: 0;
+        transition: all .5s;
+        position: absolute;
+        left: 0;
+        top: 46px;
+        width: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgba(249, 249, 249, .5);
+        z-index: 100;
+        div{
+          .history-search{
+            h2{
+              font-size: 20px;
+              i{
+                margin-left: 10px;
+                cursor: pointer;
+              }
+            }
+            .hist-list{
+              .hist-item{
+                display: inline-block;
+                width: auto;
+                font-size: 12px;
+                height: 28px;
+                line-height: 28px;
+                border: 1px solid #999;
+                border-radius: 10px;
+                padding: 0 10px;
+                margin-right: 10px;
+                cursor: pointer;
+                &:hover{
+                  background-color: #999;
+                  color: #f9f9f9;
+                }
+              }
+            }
+          }
+          .hot-music{
+            h2{
+              font-size: 20px;
+            }
+            .hotlist{
+              display: flex;
+              flex-direction: column;
+              .hotitem{
+                display: flex;
+                .sortnum{
+                  font-size: 22px;
+                  font-weight: 800;
+                  color: red;
+                  margin-right: 20px;
+                }
+                .musicitem{
+                  line-height: 14px;
+                  font-size: 14px;
+                  .songname{
+                    display: inline;
+                    margin-right: 5px;
+                  }
+                  .songinfo{
+                    display: inline;
+                    .hotnum{
+                      margin-right: 5px;
+                      display: inline;
+                    }
+                    .hotnew{
+                      display: inline;
+                      font-style: italic;
+                      font-weight: bold;
+                      font-size: 16px;
+                      color: red;
+                    }
+                  }
+                  .songdesc{
+                    font-size: 12px;
+                    line-height: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .searchresult{
+          font-size: 14px;
+          line-height: 28px;
+          span{
+            display: inline;
+          }
+          i{
+            margin-right: 5px;
+          }
+          h2{
+            font-size: 20px;
+          }
+          p{
+            margin-top: -18px;
+            color: #999;
+            .input-info{
+              display: inline;
+              color: blue;
+            }
+          }
+          ul{
+            li{
+              padding-left: 20px;
+              cursor: pointer;
+              &:hover{
+                background-color: #f9f9f9;
+              }
+            }
+          }
+        }
+      }
+    }
+    .login-wrapper{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 46px;
+      line-height: 46px;
+      cursor: pointer;
+      .username{
+        margin-left: 5px;
+      }
+    }
+  }
+  #loginwrap{
+    opacity: 0;
+    height: 0;
+    // height: 520px;
+    transition: all .5s;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 400px;
+    overflow: hidden;
+    padding: 0 70px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 300;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    h2{
+      text-align: center;
+      font-size: 30px;
+      color: #999;
+    }
+    .top-control{
+      position: absolute;
+      left: 10px;
+      top: 0;
+    }
+    .loginbtn{
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-around;
+      button{
+        float: 1;
+      }
+    }
+  }
+}
+

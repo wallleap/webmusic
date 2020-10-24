@@ -1,0 +1,94 @@
+@import '~antd/dist/antd.css';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix::before,
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
+}
+#root {
+	height: 100%;
+}
+*{
+	box-sizing: border-box;
+}
+#app{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+/*定义滚动条样式*/
+::-webkit-scrollbar{
+	width:16px;
+	height:6px;
+	background-color:rgba(240,240,240,.1);
+}
+/*定义滚动条轨道内阴影+圆角*/
+::-webkit-scrollbar-track{
+	box-shadow:inset000pxrgba(240,240,240,.5);
+	border-radius:10px;
+	background-color:rgba(240,240,240,.5);
+}
+/*定义滑块内阴影+圆角*/
+::-webkit-scrollbar-thumb{
+	border-radius:10px;
+	box-shadow:inset000pxrgba(240,240,240,.5);
+	background-color:rgba(199, 198, 198, 0.5);
+}
